@@ -1,0 +1,134 @@
+<!DOCTYPE html> <!--THIS ONE-PAGE WEBSITE STARTED IN COURSE HTML AND CSS P 346-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Our National Parks</title>
+	<link rel="stylesheet" href="./css/One_Page_Website.css">
+	<script src="./js/One_page_website.js"></script>
+</head>
+
+
+<body>
+	<!--Navigation-->
+	<div class="wrap">
+		<div class="menu-container">
+			<ul class="menu">
+				<a href="#home"><li>Home</li></a>
+				<a href="#gallery"><li>Gallery</li></a>
+				<a href="#contact"><li>Reservation</li></a>
+			</ul>
+		</div>
+	</div>
+  <!--End of Navigation-->
+  
+  <!--Home-->
+	<div id="home">
+		<div class="container">
+			<div class="text-center">
+				<span class="head-main">U.S. National Parks</span>
+			</div>
+		</div>
+	</div>
+  <!--End of Home-->
+  
+  <!--Gallery-->
+  <h2 style="text-align:center">Gallery Lightbox</h2>
+  <div class="row">
+    <div class="column">
+      <img src="./images/Thumb/thumbnail_3.jpg" style="width:100%" 
+        onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="./images/Thumb/thumbnail_5.jpg" style="width:100%" 
+        onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="./images/Thumb/thumbnail_6.jpg" style="width:100%" 
+        onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="./images/Thumb/thumbnail_9.jpg" style="width:100%" 
+        onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    </div>
+  </div>
+
+    <!--page that opens when a picture is clicked on = that is the modal-->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content" style="width: 1000px; height: 400px;">
+
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="./images/Thumb/thumbnail_3.jpg" style="width: 1000px; height: 400px;">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="./images/Thumb/thumbnail_5.jpg" style="width: 1000px; height: 400px;">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="./images/Thumb/thumbnail_6.jpg" style="width: 1000px; height: 400px;">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="./images/Thumb/thumbnail_9.jpg" style="width: 1000px; height: 400px;">
+        </div>
+    
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="./images/Thumb/thumbnail_3.jpg" style="width:250px; height: 100px;" 
+            onclick="currentSlide(1)" alt="Zion">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./images/Thumb/thumbnail_5.jpg" style="width:250px; height: 100px;" 
+            onclick="currentSlide(2)" alt="Teton">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./images/Thumb/thumbnail_6.jpg" style="width:250px; height: 100px;" 
+            onclick="currentSlide(3)" alt="Glacier">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./images/Thumb/thumbnail_9.jpg" style="width:250px; height: 100px;" 
+            onclick="currentSlide(4)" alt="Rockies">
+        </div>
+      </div>
+    </div>
+  <!--RSVP-->
+  <section id="contact">
+    <div class="container">
+      <div class="heading-padding">
+        <h1 class="heading-padding">Reservations</h1>
+        <div class="reservation">
+          <h2><span>Number of visitors allowed in the parks is limited.</span>
+            <br>Reserve early!
+          </h2>
+          <p class="rsvp-text">
+          For further info, please complete this form.
+          </p>
+            <form action="" method="POST">
+              <input class="rsvp" type="text" value="" placeholder="First Name">
+              <input class="rsvp" type="text" value="" placeholder="Last Name">
+              <input class="rsvp" type="text" value="" placeholder="Email Address">
+              <input class="rsvp" type="text" value="" placeholder="Phone Number">
+              <div class="form-spacer"></div>
+                <div class="submit">
+                  <input type="submit" value="submit">
+                </div>
+              </div>	
+            </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End of RSVP-->
